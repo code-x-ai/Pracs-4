@@ -20,6 +20,8 @@ tasks = [
 def get_tasks():
     return tasks
 
+# pip install fastapi uvicorn pydantic
+# uvicorn task_api:app --reload
 @app.get("/tasks/{task_id}")
 def get_task(task_id: int):
     for t in tasks:
